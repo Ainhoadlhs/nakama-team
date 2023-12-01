@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nakama Team</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="./assets/images/flor.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div aria-hidden="true">
+        <div class='sakura'></div>
+        <div class='sakura'></div>
+        <div class='sakura'></div>
+        <div class='sakura'></div>
+        <div class='sakura'></div>
+        <div class='sakura'></div>
+        <div class='sakura'></div>
+    </div>
+    <header class="header">
+      <h1 class="header_h1"><a class="flower" href="index.html">Nakama team</a></h1>
+      <nav class="header_nav">
+        <ul class="header_nav_ul">
+          <li><a class="flower" href="index.html#team">Equipo</a></li>
+          <li><a class="flower" href="index.html#about">Quienes somos</a></li>
+          <li><a class="flower" href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero hero_contact">
+          <div class="hero_contact-image"></div>
+        </section>
+      <section class="contact">
+        <h2 class="contact_title">Contacto</h2>
+
+        <p class="contact_info">
+          ¿Te interesa trabajar con nosotras? Para consultar cualquier duda sobre
+          nuestra forma de trabajar o nuestro equipo, no dudes en ponerte en contacto
+          con nosotras. Rellena el formulario que aparece a continuación y nos
+          pondremos en contacto contigo lo antes posible. ¡Muchas gracias!
+        </p>
+        <p class="contact_required">
+          Todos los campos marcados con
+          <span class="contact_required-mark">*</span> son obligatorios.
+        </p>
+      </section>
+
+      <form class="form" action="https://formspree.io/f/mnqkvzko" method="POST">
+        <label class="form_label" for="name"
+          >Nombre completo <span class="form_label-mark">*</span></label
+        >
+
+        <input
+          class="form_input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Nombre..."
+          required
+        />
+
+        <label class="form_label" for="email"
+          >Email <span class="form_label-mark">*</span></label
+        >
+
+        <input
+          class="form_input"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="nombre.apellidos@mail.com"
+          required
+        />
+
+        <label class="form_label" for="telephone">Teléfono</label>
+
+        <input
+          class="form_input"
+          type="tel"
+          name="telephone"
+          id="telephone"
+          placeholder="Ej: 123456789"
+        />
+
+        <label class="form_label" for="comments"
+          >Mensaje <span class="form_label-mark">*</span>
+        </label>
+
+        <textarea
+          class="form_textarea"
+          class="comments"
+          id="comments"
+          name="comments"
+          placeholder="¿Qué necesitas?"
+          required
+        ></textarea>
+
+        <input class="form_button" type="submit" value="enviar" />
+      </form>
+
+    </main>
+    <footer class="footer">
+      <p class="footer_copy">Nakama team © 2023</p>
+      <ul class="footer_ul">
+        <li><a class="flower" href="index.html#team">Equipo</a></li>
+        <li><a class="flower" href="index.html#about">Quienes somos</a></li>
+        <li><a class="flower" href="contact.html">Contacto</a></li>
+      </ul>
+      <img class="footer_logo" src="./assets/images/logo-adalab.png" alt="logo adalab" />
+    </footer>
+
+
+  </body>
+</html>

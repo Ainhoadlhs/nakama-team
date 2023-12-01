@@ -1,0 +1,96 @@
+.about {
+  padding-top: 30px;
+  padding-inline: 15px;
+  text-align: center;
+  scroll-margin-top: 130px;
+  @media (min-width: 768px) {
+    padding-inline: 30px;
+  }
+  @media (min-width: 1200px) {
+    padding-inline: 125px;
+  }
+  &_h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @include textStyle($blue-green, $titles, 2.4rem, $medium, 1.88);
+  }
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem;
+  }
+  &:nth-of-type(even) {
+    @media (min-width: 768px) {
+      /* todos los article con clase name que sean pares */
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+  }
+  &_img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-inline: auto;
+    border-radius: 8px;
+    border: solid 5px $black-8;
+    @media (min-width: 768px) {
+      width: 205px;
+      height: 205px;
+      margin-inline: 0;
+      margin-bottom: 60px;
+    }
+    @media (min-width: 1200px) {
+      width: 278px;
+      height: 278px;
+      margin-inline: 0;
+    }
+  }
+  &_text {
+    @media (min-width: 768px) {
+      width: 460px; /* original 440 */
+    }
+    &-h3 {
+      padding-top: 15px;
+      @include textStyle($black, $content, 2rem, $regular, 2.25);
+      @media (min-width: 768px) {
+        padding-top: 0px;
+      }
+    }
+    &-p {
+      padding-inline: 5px;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      @include textStyle($gunmetal, $content, 1.6rem, $regular, 1.5);
+      @media (min-width: 768px) {
+        padding-inline: 0px;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+    }
+    &-icons {
+      font-size: 1.6rem;
+      margin-bottom: 45px;
+      letter-spacing: 0.2rem;
+      & a {
+        color: $blue-green;
+        text-decoration: none;
+        &:hover {
+          color: $gunmetal;
+          text-decoration: none;
+        }
+        /* después de todos los a (links) menos el último hijo */
+        &:not(:last-child)::after {
+          content: " ·";
+          font-weight: 700;
+          color: $gunmetal;
+        }
+      }
+    }
+  }
+}

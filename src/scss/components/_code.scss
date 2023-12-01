@@ -1,0 +1,17 @@
+
+.container {
+    margin-inline: 15px;
+
+    @media(min-width:768px){
+      margin-inline: 45px;
+    }
+
+/*     @media(min-width:1200px){
+      margin-inline: 140px;
+    } */
+    
+  }
+
+.flower {
+  cursor: url(../images/flor.png), auto;
+}

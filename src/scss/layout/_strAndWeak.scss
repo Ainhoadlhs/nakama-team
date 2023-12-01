@@ -1,0 +1,59 @@
+.strAndWeak {
+  background-color: $cool-grey-2;
+  padding: 16px;
+  position: relative;
+  padding-bottom: 45px;
+  &_rectangle {
+    background-color: $white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 0;
+    right: 0;
+    top: -20px;
+    margin: auto;
+  }
+  &_boxesSW {
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: baseline;
+      gap: 30px;
+    }
+    @media (min-width: 1200px) {
+      gap: 45px;
+      padding-inline: 50px;
+    }
+  }
+}
+.weak {
+  margin-top: 30px;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+.str {
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.weak,
+.str {
+  &_h3 {
+    @include textStyle($blue-green, $titles, 2.2rem, $medium, 2.05);
+    text-align: center;
+    margin-top: 10px;
+  }
+  &_p {
+    @include textStyle($gunmetal, $content, 1.6rem, $regular, 1.5);
+    text-align: center;
+    padding: 0 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .boxesSW {
+    gap: 45px;
+  }
+}

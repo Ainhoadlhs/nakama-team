@@ -1,0 +1,67 @@
+<section class="contact">
+  <h2 class="contact_title">Contacto</h2>
+
+  <p class="contact_info">
+    ¿Te interesa trabajar con nosotras? Para consultar cualquier duda sobre
+    nuestra forma de trabajar o nuestro equipo, no dudes en ponerte en contacto
+    con nosotras. Rellena el formulario que aparece a continuación y nos
+    pondremos en contacto contigo lo antes posible. ¡Muchas gracias!
+  </p>
+  <p class="contact_required">
+    Todos los campos marcados con
+    <span class="contact_required-mark">*</span> son obligatorios.
+  </p>
+</section>
+
+<form class="form" action="https://formspree.io/f/mnqkvzko" method="POST">
+  <label class="form_label" for="name"
+    >Nombre completo <span class="form_label-mark">*</span></label
+  >
+
+  <input
+    class="form_input"
+    type="text"
+    name="name"
+    id="name"
+    placeholder="Nombre..."
+    required
+  />
+
+  <label class="form_label" for="email"
+    >Email <span class="form_label-mark">*</span></label
+  >
+
+  <input
+    class="form_input"
+    type="email"
+    name="email"
+    id="email"
+    placeholder="nombre.apellidos@mail.com"
+    required
+  />
+
+  <label class="form_label" for="telephone">Teléfono</label>
+
+  <input
+    class="form_input"
+    type="tel"
+    name="telephone"
+    id="telephone"
+    placeholder="Ej: 123456789"
+  />
+
+  <label class="form_label" for="comments"
+    >Mensaje <span class="form_label-mark">*</span>
+  </label>
+
+  <textarea
+    class="form_textarea"
+    class="comments"
+    id="comments"
+    name="comments"
+    placeholder="¿Qué necesitas?"
+    required
+  ></textarea>
+
+  <input class="form_button" type="submit" value="enviar" />
+</form>

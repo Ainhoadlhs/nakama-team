@@ -1,0 +1,28 @@
+@mixin textStyle($color,$fontFamily,$fontSize,$fontWeight,$lineHeight){
+color: $color;
+font-family:$fontFamily ;
+font-weight: $fontWeight;
+font-size: $fontSize;
+line-height: $lineHeight;
+letter-spacing: normal;
+font-stretch: normal;
+font-style: normal;
+}
+
+@mixin flexDisplay($justifyContent,$alignItem){
+display: flex;
+justify-content: $justifyContent;
+align-items: $alignItem;
+}
+
+@mixin backImage($name,$height) {
+    $url:"../images/#{$name}.jpg";
+    height: $height;
+    background-image: url($url);
+}
+
+@mixin propertiesBack() {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

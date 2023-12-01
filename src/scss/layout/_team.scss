@@ -1,0 +1,36 @@
+.team {
+    margin-top: 76px;
+    margin-bottom: 30px;
+    scroll-margin-top: 130px;
+
+    @media(min-width:768px){
+        margin-top: 45px;
+    }
+    @media(min-width:1200px){
+        margin-inline: 300px;
+
+    }
+    &_container{
+        &_h2{
+            @include textStyle($aqua,$titles,2.4rem,$medium,1.88);
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            @media(min-width:768px){
+                color: $blue-green;
+            }
+        }
+        &_p{
+            @include textStyle($gunmetal,$content,1.6rem,$regular,1.5);
+            text-align: center;
+            padding: 10px;
+            @media(min-width:768px){
+            color: $gunmetal-67;
+    
+            }
+        }
+
+    }
+
+   
+  }

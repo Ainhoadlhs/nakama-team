@@ -1,0 +1,77 @@
+.footer {
+  @include flexDisplay(0, center);
+  flex-direction: column;
+  border-top: solid 1px $cool-grey;
+
+  @media (min-width: 768px) {
+    display: grid;
+    height: 90px;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "copy footerUl"
+      "logo footerUl";
+    row-gap: 10px;
+    padding: 24px 45px 56px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 24px 138px 47px; 
+    margin-bottom: 47px;
+  }
+ 
+  &_copy {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    @include textStyle($cool-grey, $content, 1.4rem, $regular, 1.43);
+    
+    @media (min-width: 768px) {
+      grid-area: copy;
+      margin: 0;
+    }
+  }
+
+  &_ul {
+    @include textStyle($gunmetal, $content, 1.4rem, $semiBold, 1.43);
+    list-style-type: none;
+    text-transform: uppercase;
+    @include flexDisplay(0, center);
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    & a {
+      color: $gunmetal;
+      text-decoration: none;
+    }
+
+    @media (min-width: 768px) {
+      grid-area: footerUl;
+      justify-content: center;
+      align-items: flex-end;
+      align-self: center;
+
+      gap: 10px;
+      margin: 0;
+    }
+  
+  }
+  
+  &_logo{
+    width: 116;
+    height: 45px;
+    margin-bottom: 45px;
+
+    @media (min-width: 768px) {
+      grid-area: logo;
+      width: 116px;
+      height: 45px;
+      margin:0;
+    }
+
+  }
+
+}
+
+
+

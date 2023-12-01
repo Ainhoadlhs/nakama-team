@@ -1,0 +1,40 @@
+.hero {
+    @include backImage(hero-small,420px);
+    @include propertiesBack() ;
+
+
+    @media(min-width:768px){
+        @include backImage(hero-medium,420px);
+    }
+    @media(min-width:1200px){
+        @include backImage(hero-big,550px);
+    }
+    &_slogan{
+        padding: 14px 15px 16px;
+        background-color: $white;
+        top: 387px;
+        margin-block: 0;
+        position: absolute;
+
+    @media(min-width:768px){
+        background-color: $white-8;
+        width: 441px;
+        padding: 15px 30px;
+        margin-left: 46px;
+        margin-block: -47px;  }
+    
+    @media(min-width:1200px){
+        width: 574px;
+        height: 90px;
+        margin-left: 138px;
+        margin-top: 73px;
+    }
+    &-p{
+        @include textStyle($black,$content,1.8rem,$semiBold,1.39);
+        @media(min-width:1200px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    }
+  }
